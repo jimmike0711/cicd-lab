@@ -28,7 +28,7 @@ jobs:
               run: npm run format:check
 
             - name: Test
-              run: npm run test
+              run: npm run test -- --reporter=junit --outputFile=vitest-junit.xml
 
             - name: Report Test Results
               uses: dorny/test-reporter@v1
